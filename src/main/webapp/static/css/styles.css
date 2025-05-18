@@ -1,0 +1,130 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f8f9fa;
+    font-family: Arial, sans-serif;
+    color: #333;
+    text-align: center;
+}
+.container {
+    max-width: 400px;
+    width: 100%;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+h1 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+button {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    color: white;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+button:hover {
+    background-color: #0056b3;
+}
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}
+.already-account, .no-account {
+    margin-top: 3%;
+    font-size: small;
+}
+/* Скрываем стандартный чекбокс */
+input[type="checkbox"] {
+    display: none;
+}
+
+/* Обёртка для кастомного чекбокса */
+label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    user-select: none;
+    font-size: 1rem;
+    color: #333;
+}
+
+/* Скрываем стандартный чекбокс */
+input[type="checkbox"] {
+    display: none;
+}
+
+/* Обёртка для кастомного чекбокса */
+label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    user-select: none;
+    font-size: 1rem;
+    color: #333;
+    margin-bottom: 15px; /* Отступ снизу у чекбокса */
+}
+
+/* Кастомный квадрат чекбокса */
+label input[type="checkbox"] + span {
+    width: 16px;   /* чуть меньше */
+    height: 16px;  /* чуть меньше */
+    border: 2px solid #007bff;
+    border-radius: 4px;
+    display: inline-block;
+    position: relative;
+    margin-right: 10px;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+/* Галочка внутри */
+label input[type="checkbox"]:checked + span::after {
+    content: "";
+    position: absolute;
+    left: 4px;
+    top: 0px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    transform: rotate(45deg);
+    background-color: transparent;
+    border-color: white;
+}
+
+/* Фон при активном состоянии */
+label input[type="checkbox"]:checked + span {
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+/* Наведение на чекбокс */
+label:hover input[type="checkbox"] + span {
+    border-color: #0056b3;
+}

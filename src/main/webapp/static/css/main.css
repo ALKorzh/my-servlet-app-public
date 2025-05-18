@@ -1,0 +1,117 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f0f2f5;
+    color: #333;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.username {
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+
+.logout {
+    text-decoration: none;
+    background-color: #ff4d4f;
+    color: white;
+    padding: 10px 18px;
+    border-radius: 6px;
+    transition: background-color 0.3s ease;
+    font-weight: 500;
+}
+
+.logout:hover {
+    background-color: #d9363e;
+}
+
+.content {
+    flex: 1;
+    padding: 40px;
+    background-color: #fff;
+    max-width: 900px;
+    margin: 40px auto;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+}
+
+h2 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+.nav-links {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+/* Стили для ссылок профиля и выхода */
+.profile {
+    text-decoration: none;
+    background-color: #3498db;
+    color: white;
+    padding: 10px 18px;
+    border-radius: 6px;
+    transition: background-color 0.3s ease;
+    font-weight: 500;
+}
+
+.profile:hover {
+    background-color: #2980b9;
+}
+
+/* Стили для переключателей языка (кнопки) */
+.language-switcher button {
+    background-color: transparent;
+    border: 1px solid transparent;
+    color: #555;
+    font-weight: 600;
+    padding: 6px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 0.9rem;
+}
+
+.language-switcher button:hover,
+.language-switcher button:focus {
+    color: #3498db;
+    border-color: #3498db;
+    outline: none;
+}
+
+/* Разделитель между кнопками */
+.language-switcher button + button {
+    margin-left: 8px;
+}
+
+/* Адаптация для мобильных устройств */
+@media (max-width: 600px) {
+    .language-switcher button {
+        padding: 4px 8px;
+        font-size: 0.8rem;
+    }
+}
